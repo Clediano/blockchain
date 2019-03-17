@@ -1,0 +1,18 @@
+{
+  "name": "gerador-de-enderecos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bitcoinjs-lib": "^3.1.1",
+    "bs58": "^4.0.1",
+    "cryptojs": "^2.5.3",
+    "eccrypto": "^1.1.0",
+    "secp256k1": "^3.6.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
