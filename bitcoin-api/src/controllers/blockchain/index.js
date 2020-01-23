@@ -11,9 +11,24 @@ class BlockchainController {
             })
     };
 
-    async getRawTransaction(req, res) {
+    getRawTransaction(req, res) {
+        blockchain.getrawtransaction(req.params.id)
+            .then(resp => {
+                res.send(resp)
+            })
+            .catch(err => {
+                res.send(err)
+            })
+    }
 
-        return res.send({});
+    decodeRawTransaction(req, res) {
+        blockchain.decoderawtransaction(req.params.hex)
+            .then(resp => {
+                res.send(resp)
+            })
+            .catch(err => {
+                res.send(err)
+            })
     }
 
 }

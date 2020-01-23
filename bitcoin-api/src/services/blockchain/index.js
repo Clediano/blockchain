@@ -19,6 +19,29 @@ class Blockchain {
 
         return request(options);
     }
+
+    getrawtransaction(id) {
+        var dataString = `{"jsonrpc":"1.0","id":"curltext","method":"getrawtransaction","params":["${id}"]}`;
+
+        var options = {
+            ...defaultHeader,
+            body: dataString
+        };
+
+        return request(options);
+    }
+
+    decoderawtransaction(hex) {
+        var dataString = `{"jsonrpc":"1.0","id":"curltext","method":"decoderawtransaction","params":["${hex}"]}`;
+
+        var options = {
+            ...defaultHeader,
+            body: dataString
+        };
+
+        return request(options);
+    }
+
 }
 
 module.exports = new Blockchain();

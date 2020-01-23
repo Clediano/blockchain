@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { PORT } = require('./src/config/secret');
-
+const blockchain = require('./src/config/blockchain');
 const app = express();
 
 app.use(cors());
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
     req.io = io;
 
     return next();
-})
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
